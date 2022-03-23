@@ -20,7 +20,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import "./style.scss";
-// import Progress from 'react-progressbar';
+import Progress from 'react-progressbar';
 import contractImg from "src/assets/icons/pngegg.png";
 import logoImg from "src/assets/icons/logo.png";
 import ProgressCountdown from './ProgressCountdown';
@@ -125,7 +125,6 @@ function Presale() {
                     <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={endtime} description="Presale Starts" />
                   </Box>
                 }
-              {/* <Progress completed={60}/> */}
               <Grid container spacing={2} alignItems="flex-end">
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                   <Paper className="presale-card">
@@ -217,6 +216,15 @@ function Presale() {
                     <Typography variant="h6" color="textSecondary">
                       Total Contributed Amount:
                     </Typography>
+                    {totalRaisedBNB && (<Progress animation={3} completed={totalRaisedBNB/hardCap} className="progress">
+                      <p>
+                      {userInfo ? new Intl.NumberFormat({
+                      style: "currency",
+                      maximumFractionDigits: 0,
+                      minimumFractionDigits: 0,
+                      }).format(totalRaisedBNB/hardCap): 0}%
+                      </p>
+                    </Progress>)}
                     <Typography variant="h4" color="textSecondary" className="title">
                     {totalRaisedBNB ? new Intl.NumberFormat({
                       style: "currency",
@@ -227,6 +235,15 @@ function Presale() {
                     <Typography variant="h6" color="textSecondary">
                       Total Token Sold Amount:
                     </Typography>
+                    {soldAmount && (<Progress animation={3} completed={soldAmount/50000000} color="#f44336" className="progress">
+                      <p>
+                      {userInfo ? new Intl.NumberFormat({
+                      style: "currency",
+                      maximumFractionDigits: 0,
+                      minimumFractionDigits: 0,
+                      }).format(soldAmount/50000000): 0}%
+                      </p>
+                    </Progress>)}
                     <Typography variant="h4" color="textSecondary" className="title">
                     {soldAmount ? new Intl.NumberFormat({
                       style: "currency",
