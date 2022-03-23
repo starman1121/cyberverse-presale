@@ -125,6 +125,7 @@ function Presale() {
                     <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={endtime} description="Presale Starts" />
                   </Box>
                 }
+              <ProgressBar now={60}/>
               <Grid container spacing={2} alignItems="flex-end">
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                   <Paper className="presale-card">
