@@ -117,12 +117,12 @@ function Presale() {
     <div id="presale-view">
         <Grid item className={`ohm-card`}>
             <div className="stake-top-metrics">
-            {starttime && 
+            {!ended && starttime && 
                   <Box mb={3}>
                     <Typography variant="h4" color="textSecondary" className="title">
-                      PreSale Starts In
+                      {started ? 'PreSale Ends In' : 'PreSale Starts In'}
                     </Typography>
-                    <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={endtime} description="Presale Starts" />
+                    <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={started ? endtime : starttime} description="Presale Starts" />
                   </Box>
                 }
               <Grid container spacing={2} alignItems="flex-end">
