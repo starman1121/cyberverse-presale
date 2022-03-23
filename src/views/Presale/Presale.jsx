@@ -285,7 +285,7 @@ function Presale() {
                       minimumFractionDigits: 0,
                     }).format(5000):0} CBV <small>Per 1BNB</small><br/><br/>
                     </Typography>
-                    <Typography variant="h6" color="textSecondary">
+                    <Typography variant="h6" color="textSecondary" style={minEthlimit && {marginBottom:'10px'}}>
                       Min Contribute:
                     </Typography>
                     <Typography variant="h4" color="textSecondary" className="title">
@@ -295,7 +295,7 @@ function Presale() {
                       minimumFractionDigits: 0,
                     }).format(minEthlimit):0} BNB <small>Per Wallet</small><br/><br/>
                     </Typography>
-                    <Typography variant="h6" color="textSecondary">
+                    <Typography variant="h6" color="textSecondary" style={minEthlimit && {marginBottom:'10px'}}>
                       Max Contribute:
                     </Typography>
                     <Typography variant="h4" color="textSecondary" className="title">
