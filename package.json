@@ -67,6 +67,7 @@
     "react-dom": "^16.14.0",
     "react-donut-chart": "^1.2.1",
     "react-ga4": "^1.0.5",
+    "react-progressbar": "^15.4.1",
     "react-qr-reader": "^2.2.1",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",

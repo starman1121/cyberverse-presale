@@ -20,7 +20,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import "./style.scss";
-import { ReactComponent as ohmTokenImg } from "../../assets/tokens/token_OHM.svg";
+// import Progress from 'react-progressbar';
 import contractImg from "src/assets/icons/pngegg.png";
 import logoImg from "src/assets/icons/logo.png";
 import ProgressCountdown from './ProgressCountdown';
@@ -125,7 +125,7 @@ function Presale() {
                     <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={endtime} description="Presale Starts" />
                   </Box>
                 }
-              <ProgressBar now={60}/>
+              {/* <Progress completed={60}/> */}
               <Grid container spacing={2} alignItems="flex-end">
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                   <Paper className="presale-card">
