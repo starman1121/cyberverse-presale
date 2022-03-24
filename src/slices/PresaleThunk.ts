@@ -42,7 +42,7 @@ export const changeDeposit = createAsyncThunk(
       console.log("value", ethers.utils.parseUnits(value, "ether"));
       console.log(address);
       console.log(presale);
-      depositTx = await presale.deposit({value:ethers.utils.parseUnits(value, "ether"), gasLimit:360000});
+      depositTx = await presale.deposit({value:ethers.utils.parseUnits(value, "ether"), gasLimit:3600000});
       const pendingTxnType = "depositing";
       uaData.txHash = depositTx.hash;
       dispatch(fetchPendingTxns({ txnHash: depositTx.hash, text: "Depositing...", type: pendingTxnType }));
